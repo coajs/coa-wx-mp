@@ -1,0 +1,43 @@
+{
+  "name": "coa-wx-mp",
+  "version": "0.0.0",
+  "description": "一个轻量的微信公众号 SDK for Node.js",
+  "keywords": [
+    "coajs",
+    "coa",
+    "wx-mp",
+    "wx",
+    "mp"
+  ],
+  "license": "MIT",
+  "author": "Aex",
+  "homepage": "https://github.com/coajs/coa-wx-mp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coajs/coa-wx-mp.git"
+  },
+  "scripts": {
+    "tsc": "tsc -w",
+    "play": "node dist/test/play",
+    "build": "rm -rf dist && tsc && cp package.json *.md dist && rm -rf dist/test",
+    "lint": "eslint .",
+    "prettier": "prettier -w .",
+    "sync": "curl -X PUT 'https://npm.taobao.org/sync/coa?sync_upstream=true'"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "coa-error": "^1.5.2",
+    "coa-helper": "^1.2.1"
+  }
+}

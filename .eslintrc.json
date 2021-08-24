@@ -1,0 +1,17 @@
+{
+  "env": {
+    "es2021": true,
+    "mocha": true,
+    "node": true
+  },
+  "extends": ["standard-with-typescript", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-extraneous-class": "off"
+  }
+}
