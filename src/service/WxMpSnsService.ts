@@ -71,7 +71,7 @@ export class WxMpSnsService extends WxMpService {
       openid: openId,
       lang,
     }
-    const userInfo = await this.request('GET', '/sns/oauth2/userinfo', query)
+    const userInfo = await this.request('GET', '/sns/userinfo', query)
     WxMpImage.fieldEncode(userInfo, 'headimgurl')
     return userInfo
   }
