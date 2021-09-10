@@ -13,7 +13,11 @@ interface WxMpJsapiTicket {
 
 export class WxMpServiceAuth extends WxMpService {
   // 获取Token
-  async getAccessToken() {
+  async getAccessToken(): Promise<{
+    token: string
+    access_token: string
+    expireOn: number
+  }> {
     const cacheName = `WxMpAccessToken:${this.bin.config.appId}`
 
     // 尝试从存储中获取
@@ -36,7 +40,7 @@ export class WxMpServiceAuth extends WxMpService {
   }
 
   // 获取Ticket
-  async getJsapiTicket() {
+  async getJsapiTicket(): Promise<{ ticket: string; expireOn: number }> {
     const cacheName = `WxMpJsapiTicket:${this.bin.config.appId}`
 
     // 尝试从存储中获取

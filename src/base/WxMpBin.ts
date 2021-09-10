@@ -49,7 +49,10 @@ export class WxMpBin {
   }
 
   // 当错误时触发
-  protected onRequestError(_error: Error, _res: WxMpAxiosResponse): void {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected onRequestError(_error: Error, _res: WxMpAxiosResponse): void {
+    // do something on error
+  }
 
   private handleResponse(res: WxMpAxiosResponse): any {
     const data = res.data ?? {}

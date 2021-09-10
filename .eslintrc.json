@@ -1,17 +1,13 @@
 {
-  "env": {
-    "es2021": true,
-    "mocha": true,
-    "node": true
-  },
-  "extends": ["standard-with-typescript", "prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "project": "tsconfig.json",
-    "sourceType": "module"
-  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "rules": {
-    "@typescript-eslint/no-extraneous-class": "off"
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

@@ -13,7 +13,7 @@ export class WxMpService {
   async request(
     method: WxMpAxiosMethod,
     url: string,
-    query: {},
+    query: Record<string, any>,
     body = {}
   ): Promise<any> {
     return await this.bin.request({ method, url, params: query, data: body })
