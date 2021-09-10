@@ -41,7 +41,7 @@ export class WxMpBin {
     // 处理返回结果
     try {
       return this.handleResponse(res)
-    } catch (e) {
+    } catch (e: any) {
       // 触发错误事件
       this.onRequestError(e, res)
       throw e
