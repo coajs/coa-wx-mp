@@ -5,6 +5,7 @@ import {
   WxMpAxiosRequestConfig,
   WxMpAxiosResponse,
 } from './WxMpAxios'
+import { WxMpStorage } from './WxMpStorage'
 
 export interface WxMpConfig {
   appId: string
@@ -25,9 +26,11 @@ const DefaultErrorMessage: WxMpErrorMessage = {
 
 export class WxMpBin {
   readonly config: WxMpConfig
+  readonly storage: WxMpStorage
 
-  constructor(config: WxMpConfig) {
+  constructor(config: WxMpConfig, storage?: WxMpStorage) {
     this.config = config
+    this.storage = storage ?? new WxMpStorage()
   }
 
   // 请求并处理错误
