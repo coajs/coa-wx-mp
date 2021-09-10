@@ -56,7 +56,7 @@ export class WxMpBin {
       // 默认错误处理
       const errorMessage =
         DefaultErrorMessage[errorCode] ??
-        _.toString(data.errmsg) ??
+        _.toString(data.errmsg).replace(/rid: [0-f-]+$/, '') ??
         DefaultErrorMessage.default
 
       CoaError.throw(`CoaWxMp.WxReturnError.${errorCode}`, errorMessage)
