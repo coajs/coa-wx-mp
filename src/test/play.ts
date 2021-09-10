@@ -1,7 +1,7 @@
 import { $ } from 'coa-helper'
-import playSnsService from './playSnsService'
+import playAuth from './playAuth'
 
 $.run(async () => {
   // 在这里写执行方法
-  await playSnsService()
+  await playAuth()
 })
