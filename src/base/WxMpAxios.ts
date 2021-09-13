@@ -14,7 +14,7 @@ export class WxMpAxios {
   ): Promise<any> {
     // 处理返回结果
     try {
-      return await axios.request({ baseURL, ...request })
+      return await axios.request({ baseURL, proxy: false, ...request })
     } catch (e: any) {
       // 触发重试机制
       if (retryTimes < 3 && (e.statusCode !== 200 || e.data?.errcode === -1)) {
